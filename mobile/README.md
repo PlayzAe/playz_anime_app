@@ -2,10 +2,13 @@
 
 The PlayzAnime app for phones and tablets: anime, manga, manhwa and manhua, rebuilt for touch from the [Windows app](../README.md). Android 7 and newer.
 
+> [!NOTE]
+> Right now this is my most up-to-date version of PlayzAnime. It handles extensions well to a point, but it still has issues. **I'm looking for people to help me**: see [Contributing](#contributing).
+
 <p>
-<img src="../docs/screenshots/mobile/home.png" alt="Anime home" width="180"/>
+<img src="../docs/screenshots/mobile/watch.webp" alt="Watching" width="180"/>
 <img src="../docs/screenshots/mobile/manga.png" alt="Manga home" width="180"/>
-<img src="../docs/screenshots/mobile/extension.png" alt="A Mihon extension" width="180"/>
+<img src="../docs/screenshots/mobile/reader-modes.png" alt="Reading modes" width="180"/>
 <img src="../docs/screenshots/mobile/download.png" alt="Download options" width="180"/>
 </p>
 
@@ -37,7 +40,7 @@ To update, install the new APK over the old one. Your list, downloads and extens
 - Paged left to right, paged right to left, or vertical pages.
 - Long strip, or long strip with gaps. Strips have an adjustable page width.
 
-**Extensions.** The first time you open Manga, PlayzAnime offers popular Mihon extensions. Manage them in **Settings → Manga → Extensions**: install, remove, update all, or add another repo. Extensions rated NSFW hide while **Hide adult content** is on.
+**Extensions (optional).** Manga works without them. For extra sites I took inspiration from how [Mihon](https://mihon.app) handles extensions, so the app can load the ones from the [keiyoushi repo](https://github.com/keiyoushi/extensions). It's still buggy: some sources fail to load or need a retry. The first time you open Manga, I offer a few popular ones. Manage them in **Settings → Manga → Extensions**: install, remove, update all, or add another repo. Extensions rated NSFW hide while **Hide adult content** is on.
 
 **Downloads.**
 
@@ -91,9 +94,14 @@ flutter test tool/live/sources_live_test.dart
 - `lib/services/downloader.dart`: HLS and chapter downloads with resume, retries and stream-token refresh.
 - `lib/sources/manga/`: built-in manga sources and the Dart side of the extension system.
 - `android/app/src/main/kotlin/`:
-  - `ExtHost.kt` loads Mihon extension APKs privately, using Mihon's own source API (Apache-2.0) under `eu/kanade/tachiyomi/`.
+  - `ExtHost.kt` loads keiyoushi extension APKs privately. Flutter and Dart can't run them, so this Kotlin layer does, using a port of Mihon's source API (Apache-2.0) under `eu/kanade/tachiyomi/`. Most of the remaining bugs live here.
   - `MainActivity.kt` and `Notify.kt` handle the launcher icon, picture-in-picture, brightness and volume, permissions and notifications.
 
 ## Contributing
 
-Pull requests are welcome. An **iOS port** would be especially welcome: most of `lib/` is plain Flutter. The extension host is Android-only and would need another approach on iOS. Please run `flutter analyze` and `flutter test` before opening a PR.
+This is just a passion project of mine, and **I'm looking for people to help me** with it.
+
+- **Bugs:** please [open an issue](https://github.com/PlayzAe/playz_anime_app/issues), or a pull request if you know the fix. Extensions are the buggiest part.
+- **iOS:** a port would be especially welcome. Most of `lib/` is plain Flutter; the extension host is Android-only and would need another approach.
+
+Please run `flutter analyze` and `flutter test` before opening a PR.
