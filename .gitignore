@@ -44,3 +44,11 @@ Desktop.ini
 out/
 release/
 reference/
+
+# Mobile app: keep its icon script, never commit signing keys or APKs.
+!mobile/tools/*.ps1
+*.jks
+*.keystore
+key.properties
+*.apk
+*.aab

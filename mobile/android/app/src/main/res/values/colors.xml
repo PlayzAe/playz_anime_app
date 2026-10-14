@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Shu, the seal ink. Kept in step with AccentKey.shu in lib/theme/accent.dart. -->
+    <color name="ic_launcher_background">#F0532C</color>
+    <!-- One plate colour per accent, for the launcher icon aliases (MainActivity.applyIcon). -->
+    <color name="seal_shu">#F0532C</color>
+    <color name="seal_matcha">#9DBB5C</color>
+    <color name="seal_ai">#6F8FE6</color>
+    <color name="seal_yamabuki">#F3AA36</color>
+    <color name="seal_sakura">#EE83A1</color>
+    <!-- The app opens on its own ink black, not on white. -->
+    <color name="launch_background">#0C0B0A</color>
+</resources>

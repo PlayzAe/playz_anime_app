@@ -1,0 +1,30 @@
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+*.iml
+.idea/
+.metadata
+
+# Android
+android/.gradle/
+android/.kotlin/
+android/app/.cxx/
+android/captures/
+android/local.properties
+android/gradlew
+android/gradlew.bat
+android/gradle/wrapper/gradle-wrapper.jar
+android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+**/*.keystore
+**/*.jks
+android/key.properties
+
+# Emulator screenshots and local scratch
+tool/emu/shots/
+*.log

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Adaptive-icon foreground: the seal's carved frame and P on a 108dp canvas,
+     scaled into the 66dp safe zone. The plate colour comes from the background
+     layer, so one foreground serves every accent. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:translateX="25.2"
+        android:translateY="25.2">
+        <path
+            android:strokeColor="#FFF6EFE4"
+            android:strokeWidth="2.4"
+            android:pathData="M40,8.5H51A4.5,4.5 0,0 1,55.5 13V44" />
+        <path
+            android:strokeColor="#FFF6EFE4"
+            android:strokeWidth="2.4"
+            android:pathData="M55.5,49V51A4.5,4.5 0,0 1,51 55.5H22" />
+        <path
+            android:strokeColor="#FFF6EFE4"
+            android:strokeWidth="2.4"
+            android:pathData="M16,55.5H13A4.5,4.5 0,0 1,8.5 51V13A4.5,4.5 0,0 1,13 8.5H35" />
+        <path
+            android:fillColor="#FFF6EFE4"
+            android:fillType="evenOdd"
+            android:pathData="M17,14H35A12.5,12.5 0,0 1,35 39H27V48L17,51Z M27,20.5V32.5L38.5,26.5Z" />
+    </group>
+</vector>

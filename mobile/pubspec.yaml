@@ -1,0 +1,60 @@
+name: playzanime
+description: "PlayzAnime — watch anime and read manga, manhwa and manhua. The mobile build."
+publish_to: "none"
+version: 2.2.0+3
+
+environment:
+  sdk: ">=3.9.0 <4.0.0"
+  flutter: ">=3.35.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── Networking ────────────────────────────────────────────────────────────
+  dio: ^5.9.0                 # requests, cancel tokens, byte-progress downloads
+  html: ^0.15.6               # the scrapers: real DOM queries, same job as node-html-parser
+
+  # ── Media ─────────────────────────────────────────────────────────────────
+  video_player: ^2.10.0       # ExoPlayer on Android, <video> on web. Plays HLS natively.
+  cached_network_image: ^3.4.1
+
+  # ── Files ─────────────────────────────────────────────────────────────────
+  path_provider: ^2.1.5       # app-support dir for the store, downloads and the image cache
+  archive: ^4.0.7             # CBZ read + write
+  share_plus: ^11.1.0         # sharing a .playzanime profile out
+  file_picker: ^10.3.3        # importing a .playzanime profile in
+
+  # ── App plumbing ──────────────────────────────────────────────────────────
+  provider: ^6.1.5            # ChangeNotifier stores, scoped rebuilds
+  go_router: ^16.2.4          # Android back button + deep links
+  shared_preferences: ^2.5.3  # settings + the cookie jar
+  url_launcher: ^6.3.2
+  connectivity_plus: ^7.0.0
+  wakelock_plus: ^1.3.2
+
+  # ── Utilities ─────────────────────────────────────────────────────────────
+  collection: ^1.19.1
+  intl: ^0.20.2
+  flutter_inappwebview: 6.2.0-beta.3
+  flutter_svg: ^2.3.0
+  pointycastle: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+  fonts:
+    # Archivo Variable carries both the weight axis (100-900) and the width axis
+    # (62-125%), which is what the desktop app used for its condensed display
+    # type — `font-stretch: 72%`. One file, no synthetic bolding.
+    - family: Archivo
+      fonts:
+        - asset: assets/fonts/Archivo-Variable.ttf
